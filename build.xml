@@ -1,10 +1,10 @@
 <?xml version="1.0"?>
-<project name="test Project">
+<project name="test Project" default="phpunit">
   <property name="sitename" value="www.tutorialspoint.com"/>
   <property name="basedir" value="."/>
-   <target name="phpcs-ci" description="Find coding standard violations using PHP_CodeSniffer creating a log file for the continuous integration server">
-     <exec executable="phpcs" failonerror="off">
-      <arg line="-v --report-checkstyle=${basedir}/build/logs/checkstyle.xml --standard=${basedir}/build/ruleset.xml --extensions=php --ignore=extensions,library ./protected" />
-     </exec>
-    </target>
+   <target name="phpunit" description="Run unit tests with PHPUnit">
+  <exec executable="phpunit" failonerror="true">
+   <arg path="${basedir}/test" />
+  </exec>
+ </target>
 </project>

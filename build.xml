@@ -4,7 +4,7 @@
   <property name="basedir" value="."/>
    <target name="phpunit" description="Run unit tests with PHPUnit">
   <exec executable="phpunit" failonerror="true">
-   <arg path="${basedir}/test" />
+   <arg path="${basedir}/testing/tests" />
   </exec>
  </target>
 </project>

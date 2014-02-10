@@ -3,7 +3,7 @@
   <property name="sitename" value="www.tutorialspoint.com"/>
   <property name="basedir" value="."/>
   <target name="build"
-   depends="phpcs,phpunit"/>
+   depends="phpunit"/>
    <target name="phpcs"
          description="Find coding standard violations using PHP_CodeSniffer and print human readable output. Intended for usage on the command line before committing.">
   <exec executable="phpcs" failonerror="on">
